@@ -1,0 +1,23 @@
+[package]
+name = "wolfenstein-rs"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[dependencies]
+game-loop = { version = "0.10", features = ["winit"] }
+egui = "0.22"
+egui-wgpu = "0.22"
+egui-winit = { version = "0.22", default-features = false, features = [
+    "links",
+] }
+env_logger = "0.10"
+error-iter = "0.4"
+fps_ticker = "1.0.0"
+log = "0.4"
+pixels = "0.13"
+winit = "0.28"
+winit_input_helper = "0.14"
+glam = "0.24.1"
+palette = { version = "0.7.2" }
+image = "0.24.6"
