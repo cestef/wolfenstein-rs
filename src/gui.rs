@@ -178,9 +178,9 @@ impl Gui {
                 ui.add(DragValue::new(&mut self.world.lock().fov).speed(0.1));
             });
         });
-        egui::Window::new("Help").show(ctx, |ui| {
-            ui.label("Move: WASD");
-            ui.label("Rotate: QE");
-        });
+        // egui::Window::new("Help").show(ctx, |ui| {
+        //     ui.label("Move: WASD");
+        //     ui.label("Rotate: QE");
+        // });
     }
 }
