@@ -216,14 +216,14 @@ fn main() -> Result<(), Error> {
                     g.game.framework.scale_factor(scale_factor);
                 }
 
-                // Resize the window
-                if let Some(size) = g.game.input.window_resized() {
-                    if let Err(err) = g.game.pixels.resize_surface(size.width, size.height) {
-                        log_error("pixels.resize_surface", err);
-                        g.exit();
-                    }
-                    g.game.framework.resize(size.width, size.height);
-                }
+                // // Resize the window
+                // if let Some(size) = g.game.input.window_resized() {
+                //     if let Err(err) = g.game.pixels.resize_surface(size.width, size.height) {
+                //         log_error("pixels.resize_surface", err);
+                //         g.exit();
+                //     }
+                //     g.game.framework.resize(size.width, size.height);
+                // }
             }
 
             match event {
