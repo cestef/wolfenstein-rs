@@ -33,8 +33,8 @@ use gui::*;
 use helpers::*;
 use map::*;
 
-const WIDTH: u32 = 320;
-const HEIGHT: u32 = 200;
+const WIDTH: u32 = 1920 / 3;
+const HEIGHT: u32 = 1080 / 3;
 
 #[derive(Debug, Default)]
 struct Controls {
@@ -91,7 +91,7 @@ fn main() -> Result<(), Error> {
     let fps = Arc::new(Mutex::new(Fps::default()));
 
     let mut textures: Vec<Vec<Vec<u8>>> = vec![];
-    let mut r = std::io::Cursor::new(include_bytes!("../textures.png"));
+    let mut r = std::io::Cursor::new(include_bytes!("../assets/textures.png"));
     let img = image::load(&mut r, image::ImageFormat::Png).unwrap();
     for i in 0..=7 {
         let img = img.crop_imm(i * (img.width() / 8), 0, img.width() / 8, img.height());
